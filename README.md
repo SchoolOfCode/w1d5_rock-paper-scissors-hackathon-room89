@@ -64,11 +64,10 @@ Use a `while loop` and `confirm`.
 This will be deemed as complete when a player can keep playing indefinitely and has the option to stop playing after every round.
 
 ## Task 6: Scores
-
 Keep track of how many games have been played, as well as the number of wins, losses, and draws.
 
 This will be deemed as complete when this information is displayed after each round.
-
+ 
 ## Task 7: Get the player's name using a prompt
 
 Create a username `prompt` and use the username the player inputs in the game so that a player can see their name in the messages sent to them.
