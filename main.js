@@ -93,22 +93,34 @@ ask the player if they want to continue after each game
 - ask played to type 'y' to continue and 'n' to stop playing
 */
 
-let gamesPlayed = 0
-let itIsDraw = 0
-let playerWins = 0
-let playerLoses = 0
+let gamesPlayed = 0;
+let gamesDraw = 0;
+let gamesLost = 0;
+let gamesWon = 0;
 
+
+//let score = return
 do {
     getWinner(prompt("What is your move?"), move[getRandomInt(maxMoves)]);
 //    alert(result);
 //! add +1
     gamesPlayed ++
-    alert(`Games played: ${gamesPlayed} \n your wins: xx \n your draws: xx \n your losses: xx`)
+if (result === 0){
+    gamesDraw ++
+} else if (result === 1){
+    gamesWon ++
+} else if (result === -1) {
+    gamesLost ++
+}
+    alert(`Games played: ${gamesPlayed} \n your wins: ${gamesWon} \n your draws: ${gamesDraw} \n your losses: ${gamesLost}`)
 }
 while (confirm("Do you want to continue playing?"));
 
 
-//    alert(`you choose ${playerMove} and the computer choose ${computerMove}`);
+
+//let result = getWinner(playerMove, computerMove);
+
+// alert(`you choose ${playerMove} and the computer choose ${computerMove}`);
 
 
 // Task 6: Scores
