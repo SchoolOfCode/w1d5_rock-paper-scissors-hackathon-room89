@@ -16,7 +16,7 @@ console.log("3 = scissor")*/
 
 
 // let playerMove = "rock"; // Task 1 hard coded
-let playerMove = prompt("What is your move?") // Task 3.1
+// let playerMove = prompt("What is your move?") // Task 3.1
 
 
 //let computerMove = "paper"; // Task 1 - Task 3 hard coded
@@ -66,7 +66,7 @@ function getWinner(playerMove, computerMove) {
 }
 
 let result = getWinner(playerMove, computerMove); //Task 3.2
-alert(result) // Task 3.3
+// alert(result) // Task 3.3
 
 // Task 3: User Input
 
@@ -93,10 +93,23 @@ ask the player if they want to continue after each game
 - ask played to type 'y' to continue and 'n' to stop playing
 */
 
-while (confirm("Do you want to continue playing?" )){
-    getWinner(prompt("What is your move?"), move[getRandomInt(maxMoves)]);
-//    alert(`you choose ${playerMove} and the computer choose ${computerMove}`);
-    alert(result);
-}
+let gamesPlayed = 0
+let itIsDraw = 0
+let playerWins = 0
+let playerLoses = 0
 
+do {
+    getWinner(prompt("What is your move?"), move[getRandomInt(maxMoves)]);
+//    alert(result);
+//! add +1
+    gamesPlayed ++
+    alert(`Games played: ${gamesPlayed} \n your wins: xx \n your draws: xx \n your losses: xx`)
+}
+while (confirm("Do you want to continue playing?"));
+
+
+//    alert(`you choose ${playerMove} and the computer choose ${computerMove}`);
+
+
+// Task 6: Scores
 
